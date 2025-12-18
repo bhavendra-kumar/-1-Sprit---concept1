@@ -10,6 +10,7 @@ This page is rendered on every request using server-side rendering.
 Data is always fresh and suitable for user-specific dashboards.
 However, it increases server cost and response time.
 
+
 ### Hybrid Rendering (ISR) – /news
 This page uses Incremental Static Regeneration with revalidation every 60 seconds.
 It combines fast load times with reasonably fresh data.
