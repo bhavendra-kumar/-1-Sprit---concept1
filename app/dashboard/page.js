@@ -1,0 +1,17 @@
+//Dynamic Page SSR
+export const dynamic = 'force-dynamic';
+
+export default async function Dashboard() {
+  const res = await fetch(
+    'https://jsonplaceholder.typicode.com/todos/1',
+    { cache: 'no-store' }
+  );
+  const data = await res.json();
+
+  return (
+    <div>
+      <h1>User Dashboard</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+}
